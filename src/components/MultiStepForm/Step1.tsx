@@ -18,7 +18,6 @@ const Step1 = () => {
   const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log(data);
   };
-
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
@@ -96,5 +95,4 @@ const Step1 = () => {
     </div>
   );
 };
-
 export default Step1;
