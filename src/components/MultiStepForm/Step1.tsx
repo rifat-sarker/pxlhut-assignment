@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FormData, FormDataStep1 } from "@/types/formData";
+import { FormDataStep1 } from "@/types/formData";
 import { step1Schema } from "@/schemas/step1Schema";
 
-const Step1 = () => {
+const Step1 = ({ onNext }: { onNext: (data: FormDataStep1) => void }) => {
   const {
     register,
     handleSubmit,
@@ -15,20 +15,17 @@ const Step1 = () => {
     resolver: zodResolver(step1Schema),
   });
 
-  const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log(data);
-  };
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <div className=" flex items-center justify-center">
+      <div className="bg-white p-8 w-full max-w-md">
         <h1 className="text-3xl font-semibold text-center mb-6 text-gray-800">
           Step 1: Personal Info
         </h1>
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+        <form onSubmit={handleSubmit(onNext)} className="space-y-6">
           <div>
             <label
               htmlFor="fullName"
-              className="block text-lg font-medium text-gray-700 mb-2"
+              className="block text-sm   text-gray-700 mb-2"
             >
               Full Name
             </label>
@@ -47,7 +44,7 @@ const Step1 = () => {
           <div>
             <label
               htmlFor="email"
-              className="block text-lg font-medium text-gray-700 mb-2"
+              className="block text-sm   text-gray-700 mb-2"
             >
               Email
             </label>
@@ -67,7 +64,7 @@ const Step1 = () => {
           <div>
             <label
               htmlFor="phone"
-              className="block text-lg font-medium text-gray-700 mb-2"
+              className="block text-sm   text-gray-700 mb-2"
             >
               Phone
             </label>
@@ -84,12 +81,14 @@ const Step1 = () => {
             )}
           </div>
 
-          <button
-            type="submit"
-            className="w-full py-3 px-4 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            Next
-          </button>
+          <div className="flex justify-end">
+            <button
+              type="submit"
+              className="py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700"
+            >
+              Next
+            </button>
+          </div>
         </form>
       </div>
     </div>

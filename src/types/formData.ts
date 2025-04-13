@@ -3,7 +3,7 @@ export type FormData = {
   email: string;
   phone: string;
   address: string;
-  zip: number;
+  zip: string;
   username: string;
   password: string;
   confirmPassword: string;
