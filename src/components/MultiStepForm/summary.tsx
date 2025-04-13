@@ -23,13 +23,13 @@ const Summary = ({ data, onBack, onSubmit }: SummaryProps) => {
   };
 
   return (
-    <div className="flex items-center justify-center bg-gray-50">
-      <div className="bg-white p-8 w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
+    <div className="flex items-center justify-center dark:bg-gray-900 bg-gray-50">
+      <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 className="text-3xl font-semibold text-center mb-8 text-gray-800 dark:text-white">
           Review Your Information
           <hr />
         </h2>
-        <div className="space-y-4 text-gray-700">
+        <div className="space-y-4 text-gray-700 dark:text-gray-300">
           <div>
             <strong>Full Name:</strong> {data.fullName}
           </div>

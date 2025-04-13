@@ -37,14 +37,15 @@ const MultiStepForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <div className="flex items-center justify-center p-5 bg-gray-50 dark:bg-gray-900 min-h-screen">
+      <div className="rounded-lg shadow-lg w-full max-w-md">
         {step === 0 && (
           <Step1
             onNext={(data: FormDataStep1) => {
               updateForm(data);
               handleNext();
             }}
+            formData={formData} // Pass formData to Step1
           />
         )}
         {step === 1 && (
@@ -54,6 +55,7 @@ const MultiStepForm = () => {
               handleNext();
             }}
             onBack={handleBack}
+            formData={formData} // Pass formData to Step2
           />
         )}
         {step === 2 && (
@@ -63,6 +65,7 @@ const MultiStepForm = () => {
               handleNext();
             }}
             onBack={handleBack}
+            formData={formData} // Pass formData to Step3
           />
         )}
         {step === 3 && (
