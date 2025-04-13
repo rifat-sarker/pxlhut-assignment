@@ -25,8 +25,9 @@ const Step3 = ({
   return (
     <div className=" flex items-center justify-center">
       <div className="bg-white p-8 w-full max-w-md">
-        <h1 className="text-3xl font-semibold text-center mb-6 text-gray-800">
+        <h1 className="text-2xl font-semibold text-center mb-6 text-gray-800">
           Step 3: Account Setup
+          <hr />
         </h1>
         <form onSubmit={handleSubmit(onNext)} className="space-y-6">
           <div>

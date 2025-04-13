@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "id": "43fb",
+      "fullName": "Rifat Sarker",
+      "email": "rifatswd@gmail.com",
+      "phone": "+8801642550487",
+      "address": "Tangail",
+      "zip": "19605",
+      "username": "rifatsarker",
+      "password": "12345678",
+      "confirmPassword": "12345678"
+    }
+  ]
+}
