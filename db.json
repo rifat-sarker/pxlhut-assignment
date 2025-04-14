@@ -10,28 +10,7 @@
       "username": "rifatsarker",
       "password": "12345678",
       "confirmPassword": "12345678"
-    },
-    {
-      "id": "1aa6",
-      "fullName": "Rifat Sarker",
-      "email": "rifatswd@gmail.com",
-      "phone": "01642550487",
-      "address": "Tangail",
-      "zip": "19605",
-      "username": "rifatsarkerjony",
-      "password": "fsdfdfdfdfdf",
-      "confirmPassword": "fsdfdfdfdfdf"
-    },
-    {
-      "id": "4859",
-      "fullName": "Rifat Sarker",
-      "email": "rifatsarkerjony@gmail.com",
-      "phone": "+8801642550487",
-      "address": "Tangail",
-      "zip": "19605",
-      "username": "rifatsarker",
-      "password": "123456",
-      "confirmPassword": "123456"
     }
+    
   ]
 }
